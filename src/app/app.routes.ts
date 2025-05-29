@@ -1,3 +1,11 @@
 import { Routes } from '@angular/router';
+import {ProdutosComponent} from './components/produtos/produtos.component';
+import {PerfilComponent} from './components/perfil/perfil.component';
+import {NomeComponenteComponent} from './components/nome-componente/nome-componente.component';
 
-export const routes: Routes = [];
+export const routes: Routes = [
+  {path : 'nome', component: NomeComponenteComponent},
+  {path: 'perfil', component: PerfilComponent},
+  {path: 'produtos', component: ProdutosComponent},
+  {path: '**', redirectTo: 'nome', pathMatch: 'full' },
+];
