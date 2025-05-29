@@ -1,4 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { ProdutoService } from '../../services/produto.service';
+import { Produto } from '../../interfaces/Produto';
 
 @Component({
   selector: 'app-produtos',
@@ -8,9 +10,7 @@ import { Component } from '@angular/core';
   styleUrl: './produtos.component.css'
 })
 export class ProdutosComponent {
-  produtos = [
-    {nome: 'Notebook', promocao: true},
-    {nome: 'Mouse', promocao: false},
-    {nome: 'Teclado', promocao: false},
-  ]
+  private produtoService = inject(ProdutoService);
+  listaProdutos: Produto[] = [];
+
   }
