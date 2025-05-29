@@ -12,5 +12,7 @@ import { Produto } from '../../interfaces/Produto';
 export class ProdutosComponent {
   private produtoService = inject(ProdutoService);
   listaProdutos: Produto[] = [];
-
+  ngOnInit(){
+    this.listaProdutos = this.produtoService.getProdutos();
+  }
   }
