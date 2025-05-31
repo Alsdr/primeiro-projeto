@@ -3,11 +3,13 @@ import {ProdutosComponent} from './components/produtos/produtos.component';
 import {PerfilComponent} from './components/perfil/perfil.component';
 import {NomeComponenteComponent} from './components/nome-componente/nome-componente.component';
 import {TarefasComponent} from './components/tarefas/tarefas.component';
+import {ClimaComponent} from './components/clima/clima.component';
 
 export const routes: Routes = [
   {path : 'nome', component: NomeComponenteComponent},
   {path: 'perfil', component: PerfilComponent},
   {path: 'produtos', component: ProdutosComponent},
   {path: 'tarefas', component: TarefasComponent},
+  {path: 'clima', component: ClimaComponent},
   {path: '**', redirectTo: 'nome' }
 ];
